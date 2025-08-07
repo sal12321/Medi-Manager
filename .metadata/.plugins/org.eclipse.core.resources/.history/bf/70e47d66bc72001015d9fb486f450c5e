@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <%@include file = "link.jsp"%>
+      </head>
+  <body>
+  <%@include file= "header.jsp" %>
+    <div class = "contentContainer">
+    <a href = "<%= application.getContextPath()%>/feedback.jsp">Give us Feedback !!! </a>
+       <a href = "<%= application.getContextPath()%>/student-registration-page.jsp">Register yourself here </a>
+    
+    </div>
+    
+  
+  <%@include file = "scripts.jsp"%>
+  </body>
+</html>

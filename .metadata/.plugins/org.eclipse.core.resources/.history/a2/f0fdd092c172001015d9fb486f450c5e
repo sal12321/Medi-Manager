@@ -1,0 +1,122 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search Medicine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fa;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2a9d8f;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            border: none;
+            background: #2a9d8f;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background: #2a9d8f;
+            color: white;
+        }
+
+        .not-found {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>🔍 Search Medicine</h2>
+
+    <form action="search.jsp" method="post">
+        <input type="text" name="medName" placeholder="Enter medicine name" required />
+        <input type="submit" value="Search" />
+    </form>
+
+    <%
+        String medName = request.getParameter("medName");
+
+        if (medName != null && !medName.trim().equals("")) {
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/med2025", "root", "root@123");
+
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM medicine WHERE name = ?");
+                ps.setString(1, medName);
+                ResultSet rs = ps.executeQuery();
+
+                if (rs.next()) {
+    %>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td><%= rs.getString("name") %></td>
+                <td><%= rs.getString("company") %></td>
+                <td>₹<%= rs.getDouble("price") %></td>
+                <td><%= rs.getInt("quantity") %></td>
+                <td><%= rs.getDate("expiry") %></td>
+                <td><%= rs.getInt("quantity") > 0 ? "Available" : "Out of Stock" %></td>
+            </tr>
+        </table>
+    <%
+                } else {
+    %>
+        <p class="not-found">❌ Medicine not found!</p>
+    <%
+                }
+
+                rs.close();
+                ps.close();
+                con.close();
+            } catch (Exception e) {
+    %>
+        <p class="not-found">⚠️ Error: <%= e.getMessage() %></p>
+    <%
+            }
+        }
+    %>
+</body>
+</html>

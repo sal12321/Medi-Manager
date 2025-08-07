@@ -1,0 +1,28 @@
+
+body{
+	height : 100%;
+	width : 100%;
+	
+}
+
+.contentContainer{
+	display : flex;
+	flex-direction : column;
+	justify-content : center;
+	align-items : center;
+	font-size : 2rem;
+	height : 5rem;
+	width  : 100%;
+	
+	}
+	
+	a {
+	
+	background : #7cb342 ;
+	border-radius :  10px ;
+	padding : 0.5rem;
+	margin-top : 10rem;
+	
+	
+	}
+	
