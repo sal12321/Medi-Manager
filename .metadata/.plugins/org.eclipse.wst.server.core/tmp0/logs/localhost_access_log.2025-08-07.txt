@@ -1,0 +1,17 @@
+127.0.0.1 - - [07/Aug/2025:11:44:39 +0530] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [07/Aug/2025:11:44:41 +0530] "GET /feedback_app/ HTTP/1.1" 200 406
+127.0.0.1 - - [07/Aug/2025:11:44:42 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+127.0.0.1 - - [07/Aug/2025:11:48:16 +0530] "GET /feedback_app/ HTTP/1.1" 200 2133
+127.0.0.1 - - [07/Aug/2025:11:48:23 +0530] "POST /feedback_app/adminLogin HTTP/1.1" 302 -
+127.0.0.1 - - [07/Aug/2025:11:48:23 +0530] "GET /feedback_app/dashboard.jsp HTTP/1.1" 200 2494
+127.0.0.1 - - [07/Aug/2025:11:49:40 +0530] "GET /feedback_app/add_medicine.jsp HTTP/1.1" 200 2501
+127.0.0.1 - - [07/Aug/2025:11:49:40 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+127.0.0.1 - - [07/Aug/2025:11:49:54 +0530] "GET /feedback_app/dashboard.html HTTP/1.1" 404 783
+127.0.0.1 - - [07/Aug/2025:11:50:48 +0530] "GET /feedback_app/dashboard.html HTTP/1.1" 404 783
+127.0.0.1 - - [07/Aug/2025:11:50:49 +0530] "GET /feedback_app/dashboard.html HTTP/1.1" 404 783
+127.0.0.1 - - [07/Aug/2025:11:51:03 +0530] "GET /feedback_app/ HTTP/1.1" 200 2133
+127.0.0.1 - - [07/Aug/2025:11:51:07 +0530] "POST /feedback_app/adminLogin HTTP/1.1" 302 -
+127.0.0.1 - - [07/Aug/2025:11:51:07 +0530] "GET /feedback_app/dashboard.jsp HTTP/1.1" 200 2493
+127.0.0.1 - - [07/Aug/2025:11:51:10 +0530] "GET /feedback_app/add_medicine.jsp HTTP/1.1" 200 2501
+127.0.0.1 - - [07/Aug/2025:11:51:11 +0530] "GET /feedback_app/dashboard.html HTTP/1.1" 404 783
+127.0.0.1 - - [07/Aug/2025:11:51:11 +0530] "GET /favicon.ico HTTP/1.1" 404 763
