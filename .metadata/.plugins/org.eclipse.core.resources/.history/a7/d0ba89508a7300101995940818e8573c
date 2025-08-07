@@ -1,0 +1,112 @@
+<%@ page import="java.util.* , " %> 
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Medicines</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fa;
+            color: #333;
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2a9d8f;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2a9d8f;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #2a9d8f;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>All Medicines</h2>
+
+    <%
+        // Assume you have a list of Medicine objects set as request attribute from a servlet
+        List<Medicine> medicineList = (List<Medicine>) request.getAttribute("medicineList");
+
+        if (medicineList == null || medicineList.isEmpty()) {
+    %>
+        <p style="text-align:center;">No medicines found.</p>
+    <%
+        } else {
+    %>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <%
+            for (Medicine med : medicineList) {
+        %>
+        <tr>
+            <td><%= med.getId() %></td>
+            <td><%= med.getName() %></td>
+            <td><%= med.getBrand() %></td>
+            <td><%= med.getPrice() %></td>
+            <td><%= med.getQuantity() %></td>
+        </tr>
+        <%
+            }
+        %>
+    </table>
+    <%
+        }
+    %>
+
+    <div class="back-link">
+        <a href="admin_dashboard.jsp">← Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
