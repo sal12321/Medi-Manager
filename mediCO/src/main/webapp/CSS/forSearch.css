@@ -1,0 +1,39 @@
+body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fa;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2a9d8f;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background: #2a9d8f;
+            color: white;
+        }
+
+        .not-found {
+            color: red;
+            margin-top: 20px;
+        }

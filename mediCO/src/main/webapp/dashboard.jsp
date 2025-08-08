@@ -3,66 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Medical Shop Admin Dashboard</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: #f4f7fa;
-            color: #333;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            color: #2a9d8f;
-            margin-bottom: 10px;
-        }
-
-        .dashboard {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 250px;
-            height: 150px;
-            text-align: center;
-            padding: 30px 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .card a {
-            text-decoration: none;
-            color: #2a9d8f;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #aaa;
-        }
-    </style>
+   
+    <link rel="stylesheet" href="./CSS/forDashboard.css">
+    
 </head>
 <body>
 
@@ -88,7 +31,7 @@
             <a href="view_all.jsp"> View All Medicines</a>
         </div>
         <div class="card">
-            <a href="logout.jsp">🚪 Logout</a>
+            <a href="index.jsp">🚪 Logout</a>
         </div>
     </div>
 
