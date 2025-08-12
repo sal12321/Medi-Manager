@@ -4,72 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Medicine</title>
+    <link rel= "stylesheet" href = "./CSS/forMedUpdate.css">
     <style>
-        * {
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7fa;
-            color: #333;
-            padding: 40px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #2a9d8f;
-            margin-bottom: 30px;
-        }
-
-        form {
-            max-width: 500px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #2a9d8f;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #21867a;
-        }
-
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-link a {
-            color: #2a9d8f;
-            text-decoration: none;
-        }
-
-        .back-link a:hover {
-            text-decoration: underline;
-        }
+        
     </style>
 </head>
 <body>
@@ -77,6 +14,7 @@
     <h2>Update Medicine Details</h2>
 
     <form action="UpdateMedicineServlet" method="post">
+
         <label for="id">Medicine ID:</label>
         <input type="text" id="id" name="id" placeholder="Enter Medicine ID" required>
 

@@ -11,16 +11,14 @@
 
     <header>
         <h1>Admin Dashboard</h1>
-        <p>Welcome, Admin! Manage your medical store efficiently 👩‍⚕️</p>
+        <p>Welcome, Manage your medical store efficiently </p>
     </header>
 
     <div class="dashboard">
         <div class="card">
-            <a href="add_medicine.jsp">➕ Add New Medicine</a>
+            <a href="add_medicine.jsp"> Add New Medicine</a>
         </div>
-        <div class="card">
-            <a href="search.jsp">🔍 Search Medicine</a>
-        </div>
+       
         <div class="card">
             <a href="update_medicine.jsp"> Update Medicine</a>
         </div>
@@ -31,7 +29,7 @@
             <a href="view_all.jsp"> View All Medicines</a>
         </div>
         <div class="card">
-            <a href="index.jsp">🚪 Logout</a>
+            <a href="index.jsp"> Logout</a>
         </div>
     </div>
 

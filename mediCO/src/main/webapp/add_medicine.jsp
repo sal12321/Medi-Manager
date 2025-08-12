@@ -57,13 +57,14 @@
     <h2>Add New Medicine</h2>
 
     <% if (inserted) { %>
-        <div class="success-box">
+        <div class="success-box" style =  "margin : 10px;">
             ✅ Medicine added successfully!
         </div>
         <form action="add_medicine.jsp" method="get">
             <button type="submit">➕ Add More Medicine</button>
         </form>
-        <a class="back" href="dashboard.jsp">← Back to Dashboard</a>
+        <a class="back" href="dashboard.jsp" style = "  color: #2a9d8f;
+            text-decoration: none;">← Back to Dashboard</a>
     <% } else if (error) { %>
         <div class="error-box">
             ❌ Error occurred while adding medicine. Please try again.

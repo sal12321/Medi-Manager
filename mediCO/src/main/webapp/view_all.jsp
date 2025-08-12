@@ -1,23 +1,7 @@
 <%@ page import="java.sql.*, java.util.*" %>
+<%@ page import="com.med.Medicine" %>
+
 <%
-class Medicine {
-    int id;
-    String name;
-    String company;
-    double price;
-    int quantity;
-    java.sql.Date expiry;
-
-    Medicine(int id, String name, String company, double price, int quantity, java.sql.Date expiry) {
-        this.id = id;
-        this.name = name;
-        this.company = company;
-        this.price = price;
-        this.quantity = quantity;
-        this.expiry = expiry;
-    }
-}
-
 ArrayList<Medicine> medicines = new ArrayList<>();
 
 try {
@@ -52,26 +36,32 @@ try {
 <html>
 <head>
     <title>All Medicines</title>
-    
-       <link rel="stylesheet" href="./CSS/forViewAll.css">
+    <link rel="stylesheet" href="./CSS/forViewAll.css">
 </head>
+
 <body>
     <h2>All Medicines</h2>
-    
+
+    <!-- Back Button -->
+    <a href="dashboard.jsp" class="back-btn">← Back to Dashboard</a>
+
+    <!-- Search Box -->
     <h3>Search Within Page</h3>
-<input type="text" id="pageSearch" placeholder="Type medicine name..." onkeyup="scrollToMedicine()" style="padding:8px; width:300px; font-size:16px; margin-bottom: 15px;">
+    <input type="text" id="pageSearch" class="search-box" placeholder="Type medicine name...">
 
-
-    <table>
+    <!-- Medicines Table -->
+    <table id="medicineTable">
         <tr>
             <th>S.No.</th>
             <th>Name</th>
+            <th>Med_Id</th>
             <th>Company</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Expiry Date</th>
+            <th>Update Stock</th>
         </tr>
-        <%
+        <%  
             java.util.Date today = new java.util.Date();
             int serialNo = 1;
             for (Medicine m : medicines) {
@@ -80,15 +70,18 @@ try {
         <tr class="<%= isExpired ? "expired" : "" %>">
             <td><%= serialNo++ %></td>
             <td><%= m.name %></td>
+            <td><%= m.id %></td>
             <td><%= m.company %></td>
             <td><%= m.price %></td>
             <td><%= m.quantity %></td>
             <td><%= m.expiry %></td>
+            <td><a class="update-btn" href="updateStock.jsp?id=<%= m.id %>">Update</a></td>
         </tr>
         <% } %>
     </table>
+
+    <!-- Scripts -->
+    <script src="./JS/filterRow.js"></script>
+    <script src="./JS/highlightMed.js"></script>
 </body>
-
-<script src="./JS/highlightMed.js"></script> 
-
 </html>
