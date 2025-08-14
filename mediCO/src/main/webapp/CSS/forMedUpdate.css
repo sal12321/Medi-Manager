@@ -49,6 +49,32 @@
         button:hover {
             background-color: #21867a;
         }
+        
+        
+        /* Expiry date input styling */
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Focus effect for expiry date */
+form input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* Optional: Highlight expired dates in red */
+form input[type="date"].expired {
+    border-color: #ff4d4d;
+    background-color: #ffe6e6;
+}
+        
 
         .back-link {
             text-align: center;

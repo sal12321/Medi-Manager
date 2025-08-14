@@ -1,13 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+ 
+ 
+ 
+ <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update Medicine</title>
+    <link rel="stylesheet" href="./CSS/common.css">
     <link rel= "stylesheet" href = "./CSS/forMedUpdate.css">
-    <style>
-        
-    </style>
 </head>
 <body>
 
@@ -21,11 +23,19 @@
         <label for="name">New Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter new medicine name">
 
+        <label for="company">New Company Name:</label>
+        <input type="text" id="company" name="company" placeholder="Enter new company name">
+
         <label for="price">New Price:</label>
         <input type="number" id="price" name="price" placeholder="Enter new price" step="0.01">
 
         <label for="quantity">New Quantity:</label>
         <input type="number" id="quantity" name="quantity" placeholder="Enter new quantity">
+
+        <label for="expiry">New Expiry Date:</label>
+        <input type="date" id="expiry" name="expiry">
+
+        
 
         <button type="submit">Update Medicine</button>
     </form>
@@ -36,3 +46,4 @@
 
 </body>
 </html>
+ 

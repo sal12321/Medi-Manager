@@ -13,7 +13,9 @@ import java.sql.*;
 @WebServlet("/adminLogin") 
 
 public class AdminLogin extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");

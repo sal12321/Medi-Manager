@@ -8,11 +8,16 @@
 <servlet>
     <servlet-name>feedbackServlet</servlet-name>
     <servlet-class>feedback_app.feedbackServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
+</servlet>
+
+
+
+<servlet-mapping>
     <servlet-name>feedbackServlet</servlet-name>
     <url-pattern>/feedback</url-pattern>
-  </servlet-mapping>
+</servlet-mapping>
+
+
+
 
 </web-app>
